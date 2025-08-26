@@ -10,24 +10,16 @@
   <body>
     <div id="root"></div>
 
-    <!-- Floating Botpress Widget -->
-    <iframe
-      id="bp-web-widget"
-      src="https://cdn.botpress.cloud/webchat/v3.2/shareable.html?configUrl=https://files.bpcontent.cloud/2025/08/06/12/20250806121203-DQG48V8Q.json"
-      width="400"
-      height="600"
-      style="border: none;">
-    </iframe>
+<link href="https://cdn.jsdelivr.net/npm/@n8n/chat/dist/style.css" rel="stylesheet" />
 
-    <style>
-      /* Floating Botpress widget */
-      #bp-web-widget {
-        position: fixed;
-        bottom: 20px;
-        right: 20px;
-        z-index: 9999;
-      }
-    </style>
+    <script type="module">
+	import { createChat } from 'https://cdn.jsdelivr.net/npm/@n8n/chat/dist/chat.bundle.es.js';
+
+	createChat({
+		webhookUrl: 'https://workspacematt.app.n8n.cloud/webhook/de816b51-2cb2-449e-8806-37ba4e86be3f/chat'
+	});
+  
+</script>
 
   </body>
 </html>
